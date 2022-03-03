@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('blog.urls')),
+    path('', views.top, name = 'top'),
+    path('blog/',include('blog.urls')),
+    path('calcplus/',include('calcplus.urls')),
+    path('hello/', include('hello.urls')),
+    path('jisrounding/', include('jisrounding.urls')),
 ]

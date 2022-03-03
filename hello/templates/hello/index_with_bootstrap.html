@@ -1,0 +1,19 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "utf-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  crossorigin="anonymous">
+</head>
+<body class = "container">
+  <h1 class="display-4 text-primary mb-4">{{title}}</h1>
+  <p class="h5">{{msg}}</p>
+  <p class="h6"><a href="{% url goto %}">次のページは{{goto}}です！</a></p>
+
+<!-- <a href="url">link text</a> -->
+
+</body>
+</html>
