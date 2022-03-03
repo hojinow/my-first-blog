@@ -19,7 +19,7 @@ class Jisview(TemplateView):
             'title': 'JIS Rounding of Numbers',
             'top_message': 'Please fill in the measured value and digit of the value you want to get &#129315;',
             'form': JisroundingForm(),
-            'bottom_message': ""
+            'bottom_message': "&#129315;"
         }
         return render (request, 'jisrounding/main.html', self.params)
 
@@ -36,7 +36,7 @@ class Jisview(TemplateView):
             'title': 'JIS Rounding of Numbers',
             'top_message': "Rounded value is : " + str(answer),
             'form': JisroundingForm(request.POST),
-            'bottom_message': ""
+            'bottom_message': "&#129315;"
         }
         return render (request, 'jisrounding/main.html', self.params)
 
